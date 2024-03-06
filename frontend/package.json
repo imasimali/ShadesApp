@@ -1,0 +1,23 @@
+{
+  "name": "shades",
+  "version": "1.0.0",
+  "description": "A machine learning app that uses Tensorflow, React, and Parcel to best match makeup foundation shades from various beauty brands to images of skin tones.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "watch": "parcel watch index.html",
+    "build": "parcel build index.html --out-dir public"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.21.0",
+    "mem": ">=4.0.0"
+  },
+  "dependencies": {}
+}
