@@ -5,7 +5,7 @@ function Predict({ rgb, setFoundation, loading, foundation }) {
   const predictModel = async () => {
     const [r, g, b] = rgb;
     try {
-      const response = await fetch("http://localhost:5000/predict", {
+      const response = await fetch(`${process.env.API_URL}/predict`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
