@@ -131,3 +131,4 @@ dist
 
 # custom
 mydb.sqlite3
+.DS_Store

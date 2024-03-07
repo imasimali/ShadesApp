@@ -1,0 +1,17 @@
+{
+  "name": "shades-backend",
+  "version": "1.0.0",
+  "description": "A machine learning app that uses TensorFlow.js, React, and Parcel to best match makeup foundation shades from various beauty brands to images of skin tones.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Asim Ali",
+  "license": "MIT",
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.17.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.3"
+  }
+}

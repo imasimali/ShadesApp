@@ -5,7 +5,7 @@ const tf = require("@tensorflow/tfjs-node");
 const { trainModel } = require("./trainModel");
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -16,7 +16,7 @@ let foundationLabels;
 async function loadModel() {
   const { model: loadedModel, foundationLabels: loadedFoundationLabels } =
     await trainModel({
-      epochs: 100,
+      epochs: 25,
       units: 50,
       batchSize: 64,
       learningRate: 0.25,

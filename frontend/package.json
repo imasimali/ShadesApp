@@ -1,10 +1,9 @@
 {
-  "name": "shades",
+  "name": "shades-frontend",
   "version": "1.0.0",
-  "description": "A machine learning app that uses Tensorflow, React, and Parcel to best match makeup foundation shades from various beauty brands to images of skin tones.",
+  "description": "A machine learning app that uses TensorFlow.js, React, and Parcel to best match makeup foundation shades from various beauty brands to images of skin tones.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
     "watch": "parcel watch index.html",
     "build": "parcel build index.html --out-dir public"

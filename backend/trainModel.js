@@ -1,4 +1,4 @@
-const tf = require("@tensorflow/tfjs");
+const tf = require("@tensorflow/tfjs-node");
 const shadesData = require("./shades.json");
 
 async function trainModel(options) {
