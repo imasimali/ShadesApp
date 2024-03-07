@@ -1,25 +1,25 @@
 import React from "react";
-import * as tf from "@tensorflow/tfjs";
 import "../scss/predict.scss";
 
-function Predict({
-  rgb,
-  model,
-  foundationLabels,
-  setFoundation,
-  loading,
-  foundation,
-}) {
-  const predictModel = () => {
+function Predict({ rgb, setFoundation, loading, foundation }) {
+  const predictModel = async () => {
     const [r, g, b] = rgb;
-    tf.tidy(() => {
-      const input = tf.tensor2d([[r / 255, g / 255, b / 255]]);
-      let results = model.predict(input);
-      let argMax = results.argMax(1);
-      let index = argMax.dataSync()[0];
-      let foundationMatch = foundationLabels[index];
-      setFoundation(foundationMatch);
-    });
+    try {
+      const response = await fetch("http://localhost:3000/predict", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ rgb: [r, g, b] }),
+      });
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      setFoundation(data.foundation);
+    } catch (error) {
+      console.error("There was a problem with the fetch operation:", error);
+    }
   };
 
   return (
