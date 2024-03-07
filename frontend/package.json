@@ -15,9 +15,16 @@
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
-    "parcel-bundler": "^1.12.3",
-    "sass": "^1.21.0",
-    "mem": ">=4.0.0"
+    "parcel-bundler": "^1.12.5",
+    "mem": "^10.0.0",
+    "sass": "^1.21.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@babel/runtime": "^7.24.0",
+    "@tensorflow/tfjs": "^4.17.0",
+    "@tensorflow/tfjs-vis": "^1.5.1",
+    "babel-polyfill": "^6.26.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
