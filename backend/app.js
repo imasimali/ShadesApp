@@ -16,9 +16,9 @@ let foundationLabels;
 async function loadModel() {
   const { model: loadedModel, foundationLabels: loadedFoundationLabels } =
     await trainModel({
-      epochs: 25,
-      units: 50,
-      batchSize: 64,
+      epochs: 500,
+      units: 20,
+      batchSize: 32,
       learningRate: 0.25,
     });
 
